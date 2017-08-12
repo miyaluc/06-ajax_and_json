@@ -47,7 +47,7 @@ Article.loadAll = function(rawData) {
 // and process it, then hand off control to the View.
 Article.fetchAll = function() {
   if (!localStorage.rawData) {
-    $.getJSON('./data/hackerIpsum.json', function(data) {
+    $.getJSON('/data/hackerIpsum.json', function(data) {
       localStorage.setItem('rawData', JSON.stringify(data));
       //setItem is a method to put rawdata into localStorage;
       //JSON.stringify()  converts a js object into a string, formatted using JSON. this allows you to send JS objects from the browser to another application
