@@ -46,7 +46,7 @@ Article.loadAll = function(rawData) {
 // This function will retrieve the data from either a local or remote source,
 // and process it, then hand off control to the View.
 Article.fetchAll = function() {
-  if (localStorage.rawData) {
+  if (!localStorage.rawData) {
     $.getJSON('./data/hackerIpsum.json', function(data) {
       localStorage.setItem('rawData', JSON.stringify(data));
       //setItem is a method to put rawdata into localStorage;
